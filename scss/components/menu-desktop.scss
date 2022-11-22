@@ -1,0 +1,113 @@
+@import "../base/colores";
+@media screen and (min-width:500px){
+    #menu{
+        .menu__acompañamiento{
+            margin-top: 4vh;
+            .acompañamiento__contenedor{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                .acompañamiento{
+                    .bebida-papa-frita{
+                        width: 15vh;
+                        height: 15vh;
+                    }
+                }
+            }
+            .acompañamiento__contenedor-subtitulo{
+                text-align: center;
+                .acompañamiento__subtitulo{
+                    font-size: 15px;
+                }
+            }
+        }
+        .menu__contenedor-alimento-titulo{
+            width: 100%;
+            padding-left: 5%;
+            .menu__alimento-titulo{
+                display: inline;
+                font-family: 'Josefin Sans', sans-serif;
+                color:rgb(86, 31, 34);
+                font-size: 30px;
+                border-bottom: solid 3px red;
+                
+            }
+        }
+        #carne{
+            padding-top:8vh;
+            .carne__contenedor{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+                .menu__contendor-alimento{
+                    margin-top: 1.5vh;
+                    width: 25%;
+                    height: 22vh;
+                    .alimento{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .contenedor-nombre{
+                        text-align: center;
+                        .nombre-alimento{
+                            font-family: 'Josefin Sans', sans-serif;
+                            color:rgb(86, 31, 34);
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        #pollo{
+            padding-top:8vh;
+            .pollo__contenedor{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+                .menu__contendor-alimento{
+                    margin-top: 1.5vh;
+                    width: 25%;
+                    height: 22vh;
+                    .alimento{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .contenedor-nombre{
+                        text-align: center;
+                        .nombre-alimento{
+                            font-family: 'Josefin Sans', sans-serif;
+                            color:rgb(86, 31, 34);
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        #postres{
+            padding-top:8vh;
+            margin-bottom: 7vh;
+            .postres__contenedor{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+                .menu__contendor-alimento{
+                    margin-top: 1.5vh;
+                    width: 25%;
+                    height: 22vh;
+                    .alimento{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .contenedor-nombre{
+                        text-align: center;
+                        .nombre-alimento{
+                            font-family: 'Josefin Sans', sans-serif;
+                            color:rgb(86, 31, 34);
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

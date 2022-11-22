@@ -1,0 +1,91 @@
+@import "../base/colores";
+ 
+    @media screen and (max-width:500px){
+        #cabeza{
+            overflow-x: hidden;
+            position: sticky;
+            top: 0px;
+            z-index: 999;
+            width: 100%;
+        /* Display:none;*/
+        .input{
+            display: none;
+        }
+        .cabeza__contenedor-titulo-menu {
+            background-color: map-get($fondo-mobile, fondo-mobile-header);
+            padding: 5px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-content: baseline;
+        .cabeza__titulo{
+            color: white;
+            font-family: 'Secular One', sans-serif;
+        }
+        .navmenu{
+            position: fixed;
+            top:45px;
+            background-color:map-get($fondo-mobile,fondo-mobile-navmenu);            
+            color: white;
+            height: 400px;
+            width: 100%;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            clip-path:circle(0 at center);
+         }
+         .navmenu__item{
+            font-family: 'Kanit', sans-serif; 
+            font-size: 25px;
+             color: white;
+             text-decoration: none;
+         }
+         label{
+             display: block;
+             cursor: pointer;
+         }
+         .input:checked + .navmenu{
+             clip-path: circle(100% at center);
+         }
+        }
+    }
+}
+@media screen and (min-width:500px){
+    /* display:none */
+    .contenedor-menu , input {
+        display: none;
+    } 
+    #cabeza{
+        background-color: map-get($fondo-mobile, fondo-mobile-header);
+        padding:1vh;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        .cabeza__contenedor-titulo-menu{
+            margin: 0 10%;
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            align-items: baseline;
+            }
+        .cabeza__titulo{
+            color: white;
+            font-size: 30px;
+            font-family: 'Kanit', sans-serif;
+        }
+        .navmenu{
+            width:50%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            .navmenu__item{
+                text-decoration: none;
+                color: white;
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 15px;
+            }
+        }
+    }
+}

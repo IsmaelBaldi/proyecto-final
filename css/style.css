@@ -1,0 +1,835 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Mismos estilos */
+/* Background-color - Mobile */
+@media screen and (max-width: 500px) {
+  #cabeza {
+    overflow-x: hidden;
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+    width: 100%;
+    /* Display:none;*/
+  }
+  #cabeza .input {
+    display: none;
+  }
+  #cabeza .cabeza__contenedor-titulo-menu {
+    background-color: rgb(255, 217, 92);
+    padding: 5px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-content: baseline;
+  }
+  #cabeza .cabeza__contenedor-titulo-menu .cabeza__titulo {
+    color: white;
+    font-family: "Secular One", sans-serif;
+  }
+  #cabeza .cabeza__contenedor-titulo-menu .navmenu {
+    position: fixed;
+    top: 45px;
+    background-color: rgb(255, 231, 153);
+    color: white;
+    height: 400px;
+    width: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    clip-path: circle(0 at center);
+  }
+  #cabeza .cabeza__contenedor-titulo-menu .navmenu__item {
+    font-family: "Kanit", sans-serif;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+  }
+  #cabeza .cabeza__contenedor-titulo-menu label {
+    display: block;
+    cursor: pointer;
+  }
+  #cabeza .cabeza__contenedor-titulo-menu .input:checked + .navmenu {
+    clip-path: circle(100% at center);
+  }
+}
+@media screen and (min-width: 500px) {
+  /* display:none */
+  .contenedor-menu, input {
+    display: none;
+  }
+  #cabeza {
+    background-color: rgb(255, 217, 92);
+    padding: 1vh;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  #cabeza .cabeza__contenedor-titulo-menu {
+    margin: 0 10%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  #cabeza .cabeza__titulo {
+    color: white;
+    font-size: 30px;
+    font-family: "Kanit", sans-serif;
+  }
+  #cabeza .navmenu {
+    width: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+  #cabeza .navmenu .navmenu__item {
+    text-decoration: none;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 15px;
+  }
+}
+/* Background-color - Mobile */
+@media screen and (max-width: 500px) {
+  #pie {
+    margin: 2vh 0;
+  }
+  #pie .pie__lista-item {
+    list-style-type: none;
+  }
+  #pie .pie__lista-item .pie__enlace {
+    text-decoration: none;
+    color: black;
+  }
+  #pie .pie__contenedor-iconos {
+    margin: 1vh 25%;
+    width: 50%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+  }
+  #pie .pie__contenedor-ultimo {
+    margin-top: 3vh;
+    text-align: center;
+    background-color: rgb(255, 217, 92);
+    padding: 0;
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 500px) {
+  #pie {
+    margin: 2vh 0;
+  }
+  #pie .pie__lista-item {
+    list-style-type: none;
+  }
+  #pie .pie__lista-item .pie__enlace {
+    text-decoration: none;
+    color: black;
+  }
+  #pie .pie__contenedor-iconos {
+    margin: 1vh 25%;
+    width: 50%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+  }
+  #pie .pie__contenedor-ultimo {
+    margin-top: 3vh;
+    text-align: center;
+    background-color: rgb(255, 217, 92);
+    padding: 0;
+    font-size: 10px;
+  }
+}
+/* index */
+/* Background-color - Mobile */
+/* contenido-mobile */
+@media screen and (max-width: 500px) {
+  #contenido #contenido__img-fondo-mobile {
+    height: 70vh;
+    width: 100%;
+    background-image: url("../images/fondo.jpg");
+    background-color: rgb(90, 90, 90);
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  #contenido .contenido__contenedor-main {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+  }
+  #contenido .contenido__titulo-main {
+    padding: 2vh 0;
+    font-size: 30px;
+    color: white;
+    font-family: "Staatliches", cursiva;
+  }
+  #contenido .contenido__subtitulo-main {
+    font-size: 15px;
+    color: white;
+    font-family: "Caveat", cursiva;
+  }
+  #contenido .importante__contenedor-titulo {
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  #contenido .importante__titulo {
+    position: relative;
+    color: rgb(100, 13, 20);
+    font-family: cursive;
+    z-index: 1;
+  }
+  #contenido .importante__titulo::after, #contenido .importante__titulo::before {
+    content: "";
+    position: absolute;
+    width: 4vh;
+    height: 0.4vh;
+    background-color: currentColor;
+    position: absolute;
+    top: 15px;
+    z-index: 1;
+  }
+  #contenido .importante__titulo::before {
+    left: -5vh;
+  }
+  #contenido .importante__titulo::after {
+    right: -5vh;
+  }
+  #contenido .importante_contenedor-presentacion {
+    width: 100%;
+    margin: 5vh 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+  }
+  #contenido .importante_contenedor-presentacion .contenedor-presentacion__contenido-subtitulo {
+    width: 70%;
+  }
+  #contenido .importante_contenedor-presentacion .contenedor-presentacion__primer-encabezamiento {
+    font-family: "Mali", cursive;
+    color: rgb(252, 47, 0);
+    font-size: 20px;
+  }
+  #contenido .importante_contenedor-presentacion .contenedor-presentacion__segundo-encabezamiento {
+    font-size: 25px;
+    font-family: "Permanent Marker", cursive;
+  }
+  #contenido .importante_contenedor-presentacion .contenedor-presentacion__animacion-hamburguesa {
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+    /*  background-color: rgba(130, 96, 2, 0.925); */
+  }
+  #contenido .importante_contenedor-presentacion .contenedor-presentacion__subtitulo {
+    color: rgb(102, 102, 102);
+    font-family: "Noto Serif JP", serif;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 500px) {
+  #contenido__img-fondo-mobile {
+    height: 70vh;
+    width: 100%;
+    background-image: url("../images/fondo.jpg");
+    background-color: rgb(90, 90, 90);
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  #contenido__img-fondo-mobile .contenido__contenedor-main {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+  }
+  #contenido__img-fondo-mobile .contenido__contenedor-main .contenido__titulo-main {
+    padding: 2vh 0;
+    font-size: 50px;
+    color: white;
+    font-family: "Oxygen", sans-serif;
+  }
+  #contenido__img-fondo-mobile .contenido__contenedor-main .contenido__subtitulo-main {
+    font-size: 25px;
+    color: white;
+    font-family: "Sono", sans-serif;
+  }
+  #contenido__importante {
+    margin-top: 3vh;
+  }
+  #contenido__importante .importante__contenedor-titulo {
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  #contenido__importante .importante__contenedor-titulo .importante__titulo {
+    position: relative;
+    color: rgb(100, 13, 20);
+    font-family: cursive;
+    z-index: 1;
+  }
+  #contenido__importante .importante__contenedor-titulo .importante__titulo::after, #contenido__importante .importante__contenedor-titulo .importante__titulo::before {
+    content: "";
+    position: absolute;
+    width: 4vh;
+    height: 0.4vh;
+    background-color: currentColor;
+    position: absolute;
+    top: 20px;
+    z-index: 1;
+  }
+  #contenido__importante .importante__contenedor-titulo .importante__titulo::before {
+    left: -5vh;
+  }
+  #contenido__importante .importante__contenedor-titulo .importante__titulo::after {
+    right: -5vh;
+  }
+  #contenido__importante .importante_contenedor-presentacion {
+    width: 100%;
+    margin: 5vh 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #contenido__importante .importante_contenedor-presentacion .contenedor-presentacion__primer-encabezamiento {
+    font-family: "Mali", cursive;
+    color: rgb(252, 47, 0);
+    font-size: 40px;
+  }
+  #contenido__importante .importante_contenedor-presentacion .contenedor-presentacion__segundo-encabezamiento {
+    font-size: 35px;
+    font-family: "Permanent Marker", cursive;
+  }
+  #contenido__importante .importante_contenedor-presentacion .contenedor-presentacion__animacion-hamburguesa {
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+    /*  background-color: rgba(130, 96, 2, 0.925); */
+  }
+  #contenido__importante .importante_contenedor-presentacion .contenedor-presentacion__subtitulo {
+    color: rgb(102, 102, 102);
+    font-family: "Noto Serif JP", serif;
+    font-size: 18px;
+  }
+}
+/* Background-color - Mobile */
+@media screen and (max-width: 500px) {
+  #galeria {
+    padding-bottom: 6vh;
+    background-color: #091523;
+    width: 100%;
+  }
+  #galeria .galeria__titulo {
+    padding: 2.5vh 0;
+    text-align: center;
+    font-family: "Noto Sans SC", sans-serif;
+    font-size: 20px;
+    color: white;
+  }
+  #galeria .galeria__contenedor {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: flex-start;
+    width: 100%;
+  }
+  #galeria .galeria__contenedor .galeria__contenedor-fotos {
+    width: 100%;
+    margin: 0.8vh 0;
+  }
+  #galeria .galeria__contenedor .galeria__contenedor-fotos .galeria__fotos {
+    width: 100%;
+    height: 60vh;
+  }
+}
+@media screen and (min-width: 500px) {
+  #galeria {
+    padding-bottom: 6vh;
+    background-color: #091523;
+    width: 100%;
+  }
+  #galeria .galeria__titulo {
+    padding: 2.5vh 0;
+    text-align: center;
+    font-family: "Noto Sans SC", sans-serif;
+    font-size: 30px;
+    text-decoration: underline;
+    color: white;
+  }
+  #galeria .galeria__contenedor {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  #galeria .galeria__contenedor .galeria__contenedor-fotos {
+    width: 30%;
+    margin: 0.8vh 1vh;
+  }
+  #galeria .galeria__contenedor .galeria__contenedor-fotos .galeria__fotos {
+    width: 100%;
+    height: 60vh;
+  }
+}
+/* Background-color - Mobile */
+@media screen and (max-width: 500px) {
+  #app {
+    margin: 4vh 0;
+    background-color: rgb(255, 217, 92);
+    width: 100%;
+  }
+  #app .app__contenedor {
+    padding: 5vh 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+  }
+  #app .app__contenedor .app__contenedor-img-titulo {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
+  #app .app__contenedor .app__contenedor-img-titulo .app__contenedor-logotipo {
+    padding: 1vh;
+    border-radius: 2vh;
+    background-color: #1D6587;
+    color: rgb(255, 236, 174);
+  }
+  #app .app__contenedor .app__contenedor-img-titulo .app__titulo {
+    font-family: "Heebo", sans-serif;
+    font-size: 20px;
+  }
+  #app .app__contenedor .app__contenedor-subtitulo {
+    margin: 1vh 0;
+  }
+  #app .app__contenedor .app__contendor-boton {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 500px) {
+  #app {
+    margin: 4vh 0;
+    background-color: rgb(255, 217, 92);
+    width: 100%;
+  }
+  #app .app__contenedor {
+    padding: 5vh 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+  }
+  #app .app__contenedor .app__contenedor-img-titulo {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
+  #app .app__contenedor .app__contenedor-img-titulo .app__contenedor-logotipo {
+    padding: 1vh;
+    border-radius: 2vh;
+    background-color: #1D6587;
+    color: rgb(255, 236, 174);
+  }
+  #app .app__contenedor .app__contenedor-img-titulo .app__titulo {
+    font-family: "Heebo", sans-serif;
+    font-size: 30px;
+  }
+  #app .app__contenedor .app__contenedor-subtitulo {
+    margin: 1vh 0;
+  }
+  #app .app__contenedor .app__contenedor-subtitulo .app__subtitulo {
+    font-size: 20px;
+  }
+  #app .app__contenedor .app__contendor-boton {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+}
+/* menu */
+/* Background-color - Mobile */
+@media screen and (max-width: 500px) {
+  /* display:none */
+  .menu__nav-contenedor-antojos {
+    display: none;
+  }
+  #menu__nav {
+    margin-top: 2vh;
+  }
+  #menu__nav .menu__nav-contenedor-opciones {
+    padding: 0.4vh;
+    border-bottom: solid 0.8px rgb(134, 50, 54);
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+  #menu__nav .menu__nav-contenedor-opciones .menu__nav-opciones {
+    list-style-type: none;
+  }
+  #menu__nav .menu__nav-contenedor-opciones .menu__nav-opciones .menu-opcion {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Prompt", sans-serif;
+    color: rgb(134, 50, 54);
+  }
+  #menu {
+    margin-top: 5vh;
+  }
+  #menu .acompañamiento__contenedor {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  #menu .acompañamiento__contenedor .bebida-papa-frita {
+    height: 12vh;
+    width: 12vh;
+  }
+  #menu .acompañamiento__contenedor-subtitulo {
+    text-align: center;
+  }
+  #menu .acompañamiento__contenedor-subtitulo .acompañamiento__subtitulo {
+    font-size: 17px;
+  }
+  #menu .menu__contenedor-alimento-titulo {
+    padding: 0.5vh;
+    border-top: solid 0.5px rgb(134, 50, 54);
+    border-bottom: solid 0.5px rgb(134, 50, 54);
+  }
+  #menu .menu__contenedor-alimento-titulo .menu__alimento-titulo {
+    text-align: center;
+    font-family: "Heebo", sans-serif;
+    font-size: 28px;
+    color: rgb(86, 31, 34);
+  }
+  #menu #carne {
+    margin-top: 3vh;
+  }
+  #menu #carne .carne__contenedor {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  #menu #carne .carne__contenedor .menu__contendor-alimento {
+    width: 35%;
+    height: 35vh;
+  }
+  #menu #carne .carne__contenedor .menu__contendor-alimento .alimento {
+    width: 100%;
+    height: 80%;
+  }
+  #menu #carne .carne__contenedor .menu__contendor-alimento .contenedor-nombre {
+    text-align: center;
+  }
+  #menu #carne .carne__contenedor .menu__contendor-alimento .contenedor-nombre .nombre-alimento {
+    font-family: "Josefin Sans", sans-serif;
+    color: rgb(86, 31, 34);
+    font-size: 20px;
+  }
+  #menu #pollo {
+    margin-top: 3vh;
+  }
+  #menu #pollo .pollo__contenedor {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  #menu #pollo .pollo__contenedor .menu__contendor-alimento {
+    width: 35%;
+    height: 35vh;
+  }
+  #menu #pollo .pollo__contenedor .menu__contendor-alimento .alimento {
+    width: 100%;
+    height: 80%;
+  }
+  #menu #pollo .pollo__contenedor .menu__contendor-alimento .contenedor-nombre {
+    text-align: center;
+  }
+  #menu #pollo .pollo__contenedor .menu__contendor-alimento .contenedor-nombre .nombre-alimento {
+    font-family: "Josefin Sans", sans-serif;
+    color: rgb(86, 31, 34);
+    font-size: 20px;
+  }
+  #menu #postres {
+    margin-top: 8vh;
+  }
+  #menu #postres .postres__contenedor {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  #menu #postres .postres__contenedor .menu__contendor-alimento {
+    width: 35%;
+    height: 35vh;
+  }
+  #menu #postres .postres__contenedor .menu__contendor-alimento .alimento {
+    width: 100%;
+    height: 80%;
+  }
+  #menu #postres .postres__contenedor .menu__contendor-alimento .contenedor-nombre {
+    text-align: center;
+  }
+  #menu #postres .postres__contenedor .menu__contendor-alimento .contenedor-nombre .nombre-alimento {
+    font-family: "Josefin Sans", sans-serif;
+    color: rgb(86, 31, 34);
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 500px) {
+  #menu__nav {
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    background-image: url("../images/menu-nav.jpg");
+    background-color: rgb(58, 57, 57);
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+  }
+  #menu__nav .menu__nav-contenedor-antojos .antojos {
+    color: white;
+    font-size: 55px;
+    font-family: "Crete Round", serif;
+  }
+  #menu__nav .menu__nav-contenedor-antojos .subtitulo-antojos {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Sono", sans-serif;
+    color: white;
+  }
+  #menu__nav .menu__nav-contenedor-opciones {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 3vh;
+    border-bottom: solid 0.8px rgb(134, 50, 54);
+    margin: 0% 40%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  #menu__nav .menu__nav-contenedor-opciones .menu__nav-opciones {
+    list-style-type: none;
+  }
+  #menu__nav .menu__nav-contenedor-opciones .menu__nav-opciones .menu-opcion {
+    margin-right: 4vh;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Prompt", sans-serif;
+    color: white;
+  }
+  #menu__nav .menu__nav-contenedor-opciones .menu__nav-opciones .menu-opcion:hover {
+    border-bottom: solid 3px red;
+  }
+}
+/* Background-color - Mobile */
+@media screen and (min-width: 500px) {
+  #menu .menu__acompañamiento {
+    margin-top: 4vh;
+  }
+  #menu .menu__acompañamiento .acompañamiento__contenedor {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  #menu .menu__acompañamiento .acompañamiento__contenedor .acompañamiento .bebida-papa-frita {
+    width: 15vh;
+    height: 15vh;
+  }
+  #menu .menu__acompañamiento .acompañamiento__contenedor-subtitulo {
+    text-align: center;
+  }
+  #menu .menu__acompañamiento .acompañamiento__contenedor-subtitulo .acompañamiento__subtitulo {
+    font-size: 15px;
+  }
+  #menu .menu__contenedor-alimento-titulo {
+    width: 100%;
+    padding-left: 5%;
+  }
+  #menu .menu__contenedor-alimento-titulo .menu__alimento-titulo {
+    display: inline;
+    font-family: "Josefin Sans", sans-serif;
+    color: rgb(86, 31, 34);
+    font-size: 30px;
+    border-bottom: solid 3px red;
+  }
+  #menu #carne {
+    padding-top: 8vh;
+  }
+  #menu #carne .carne__contenedor {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+  #menu #carne .carne__contenedor .menu__contendor-alimento {
+    margin-top: 1.5vh;
+    width: 25%;
+    height: 22vh;
+  }
+  #menu #carne .carne__contenedor .menu__contendor-alimento .alimento {
+    width: 100%;
+    height: 100%;
+  }
+  #menu #carne .carne__contenedor .menu__contendor-alimento .contenedor-nombre {
+    text-align: center;
+  }
+  #menu #carne .carne__contenedor .menu__contendor-alimento .contenedor-nombre .nombre-alimento {
+    font-family: "Josefin Sans", sans-serif;
+    color: rgb(86, 31, 34);
+    font-size: 20px;
+  }
+  #menu #pollo {
+    padding-top: 8vh;
+  }
+  #menu #pollo .pollo__contenedor {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+  #menu #pollo .pollo__contenedor .menu__contendor-alimento {
+    margin-top: 1.5vh;
+    width: 25%;
+    height: 22vh;
+  }
+  #menu #pollo .pollo__contenedor .menu__contendor-alimento .alimento {
+    width: 100%;
+    height: 100%;
+  }
+  #menu #pollo .pollo__contenedor .menu__contendor-alimento .contenedor-nombre {
+    text-align: center;
+  }
+  #menu #pollo .pollo__contenedor .menu__contendor-alimento .contenedor-nombre .nombre-alimento {
+    font-family: "Josefin Sans", sans-serif;
+    color: rgb(86, 31, 34);
+    font-size: 20px;
+  }
+  #menu #postres {
+    padding-top: 8vh;
+    margin-bottom: 7vh;
+  }
+  #menu #postres .postres__contenedor {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+  #menu #postres .postres__contenedor .menu__contendor-alimento {
+    margin-top: 1.5vh;
+    width: 25%;
+    height: 22vh;
+  }
+  #menu #postres .postres__contenedor .menu__contendor-alimento .alimento {
+    width: 100%;
+    height: 100%;
+  }
+  #menu #postres .postres__contenedor .menu__contendor-alimento .contenedor-nombre {
+    text-align: center;
+  }
+  #menu #postres .postres__contenedor .menu__contendor-alimento .contenedor-nombre .nombre-alimento {
+    font-family: "Josefin Sans", sans-serif;
+    color: rgb(86, 31, 34);
+    font-size: 20px;
+  }
+}
+/* sucursales */
+/* Background-color - Mobile */
+@media screen and (min-width: 500px) {
+  #sucursal .sucursal__img-fondo {
+    position: relative;
+    height: 65vh;
+    width: 100%;
+    background-image: url("../images/restaurant-g7341687ae_1280.jpg");
+    background-color: rgb(98, 97, 97);
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  #sucursal .sucursal__img-fondo .sucursal__contenedor {
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #sucursal .sucursal__img-fondo .sucursal__contenedor .sucursal__titulo {
+    color: white;
+    font-size: 55px;
+    font-family: "Crete Round", serif;
+  }
+  #sucursal .sucursal__img-fondo .sucursal__contenedor .sucursal__subtitulo {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Sono", sans-serif;
+    color: white;
+  }
+  #sucursal .sucursal__contenedor {
+    margin: 0 15%;
+  }
+  #sucursal .sucursal__contenedor .sucursal__datos-mapa {
+    margin-top: 8vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  #sucursal .sucursal__contenedor .sucursal__datos-mapa .datos {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+  }
+  #sucursal .sucursal__contenedor .sucursal__datos-mapa .datos .sucursal__local {
+    font-family: "Nerko One", cursive;
+    font-size: 40px;
+  }
+  #sucursal .sucursal__contenedor .sucursal__datos-mapa .datos .datos-sucursal {
+    margin-top: 2vh;
+  }
+  #sucursal .sucursal__contenedor .sucursal__datos-mapa .datos .datos-sucursal .datos-encabezado {
+    font-family: "Fragment Mono", monospace;
+    font-size: 25px;
+  }
+  #sucursal .sucursal__contenedor .sucursal__datos-mapa .datos .datos-sucursal .dato-info {
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

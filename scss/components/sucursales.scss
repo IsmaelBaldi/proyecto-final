@@ -1,0 +1,65 @@
+@import "../base/colores";
+@media screen and (min-width:500px) {
+   #sucursal{
+    .sucursal__img-fondo{
+        position: relative;
+        height: 65vh;
+        width: 100%;
+        background-image: url("../images/restaurant-g7341687ae_1280.jpg");
+        background-color: rgb(98, 97, 97);
+        background-blend-mode: soft-light;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        .sucursal__contenedor{
+            height: 100%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            .sucursal__titulo{
+                color: white;
+                font-size: 55px;
+                font-family: 'Crete Round', serif;
+            }
+            .sucursal__subtitulo{
+                display: block;
+                text-align: center;
+                font-size: 30px;
+                font-family: 'Sono', sans-serif;
+                color: white;
+            }
+        }
+    }
+    .sucursal__contenedor{
+        margin: 0 15%;
+        .sucursal__datos-mapa{
+            margin-top: 8vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content:space-between;
+            .datos{
+                display: flex;
+                flex-flow: column wrap;
+                align-content: flex-start;
+                .sucursal__local{
+                    font-family: 'Nerko One', cursive;
+                    font-size: 40px;
+                }
+                .datos-sucursal{
+                    margin-top: 2vh;
+                    .datos-encabezado{
+                        font-family: 'Fragment Mono', monospace;
+                        font-size: 25px;
+                    }
+                    .dato-info{
+                        margin:0;
+                    }
+                }
+            }
+        }
+
+    }
+    }
+}
